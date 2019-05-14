@@ -1,0 +1,36 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-title>
+			David's Logic Game
+		</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-item>
+		<ion-label>Number of people</ion-label>
+		<ion-input type="number" inputmode="numeric" value="10" step="1" min="3" max="20"></ion-input>
+	</ion-item>
+	<ion-item>
+		<ion-label id="ion-cb-4-lbl">Colors</ion-label>
+		<ion-checkbox checked="" slot="start" ></ion-checkbox>
+	</ion-item>
+	<ion-item>
+		<ion-label id="ion-cb-4-lbl">Age</ion-label>
+		<ion-checkbox checked="" slot="start" ></ion-checkbox>
+	</ion-item>
+
+	<ion-item>
+		<ion-range (ionChange)="updateCount()" value="10" min="3" max="20" step="1" snaps="true" color="secondary">
+			<ion-label slot="start">3</ion-label>
+			<ion-label slot="end">20</ion-label>
+		</ion-range>
+	</ion-item>
+
+
+	<ion-button expand="full" (click)="start()">Start new game</ion-button>
+
+	<div class="ion-padding">
+
+	</div>
+</ion-content>
